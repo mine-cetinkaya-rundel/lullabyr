@@ -10,9 +10,11 @@ fruits <- fruits_page %>%
   html_nodes(".column-width a") %>%
   html_text()
 
-# add fruits starting with V
+# add fruits starting with I, V, X ---------------------------------------------
+# ref: https://www.wcrf-uk.org/uk/recipes/alphabet-of-fruit#v
+# ref: https://en.wikibooks.org/wiki/Wikijunior:Fruit_Alphabet
 
-fruits <- c(fruits, "Vanilla Bean", "Victoria plum")
+fruits <- c(fruits, "Victoria plum", "Indian Plum", "Xigua")
 
 # save data --------------------------------------------------------------------
 use_data(fruits)
