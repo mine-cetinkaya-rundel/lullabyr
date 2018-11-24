@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# lullabyr
+# lullabyr <img src="man/figures/lullabyr_logo.png" align="right" />
 
 Children’s songs can be repetitive. This is said to be good for
 childrens’ learning, but can get boring for parents. This package helps
