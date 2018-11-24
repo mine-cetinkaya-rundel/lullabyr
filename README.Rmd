@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# lullabyr
+
+Children's songs can be repetitive. This is said to be good for 
+childrens' learning, but can get boring for parents. This package helps 
+parents who lack creativity (or energy) to generate childrens' songs with 
+new words in them. It's also a great way to get your child (if they're old 
+enough) to generate a song for themselves. Maybe they'll get inspired and 
+want to learn R!
+
+## Installation
+
+This package is not on CRAN. You can install it from GitHub with:
+
+``` r
+library(devtools)
+install_github("mine-cetinkaya-rundel/lullabyr")
+```
+
+## Example
+
+Start by loading the package.
+
+```{r}
+library(lullabyr)
+```
+
+Let's set a seed for the random generation first.
+
+```{r}
+set.seed(52)
+```
+
+A is for... with animals:
+
+```{r}
+sing_alphabet(animals)
+```
+
+A is for... with vegetables:
+
+```{r}
+sing_alphabet(vegetables)
+```
+
+A is for... with fruits:
+
+```{r}
+sing_alphabet(fruits)
+```
+
+A is for... with countries. There are no recognized countries starting with 
+some of the letters so we get a warning:
+
+```{r}
+sing_alphabet(countries)
+```
+
+
