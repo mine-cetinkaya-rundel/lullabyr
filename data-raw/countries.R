@@ -4,10 +4,10 @@ library(rvest)
 library(usethis)
 
 # scrape data ------------------------------------------------------------------
-countries_page <- read_html("https://simple.wikipedia.org/wiki/List_of_countries")
+countries_page <- read_html("https://www.britannica.com/topic/list-of-countries-1993160")
 
 countries <- countries_page %>%
-  html_nodes(".b a") %>%
+  html_nodes(".with-dots .md-crosslink") %>%
   html_text()
 
 # save data --------------------------------------------------------------------
