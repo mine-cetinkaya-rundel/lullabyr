@@ -162,3 +162,8 @@ sing_alphabet(countries)
 #>  Y is for Yemen, Y - Y - Yemen.
 #>  Z is for Zimbabwe, Z - Z - Zimbabwe.
 ```
+
+## Logo credit
+
+The baby face in the logo is Baby by Joris Millot from the [Noun
+Project](https://thenounproject.com/).

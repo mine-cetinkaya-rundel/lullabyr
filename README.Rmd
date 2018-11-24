@@ -69,4 +69,6 @@ some of the letters so we get a warning:
 sing_alphabet(countries)
 ```
 
+## Logo credit
 
+The baby face in the logo is Baby by Joris Millot from the [Noun Project](https://thenounproject.com/).
