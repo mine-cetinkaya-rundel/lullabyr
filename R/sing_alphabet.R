@@ -5,11 +5,12 @@
 #'
 #' @param wordbag A character vector of words to sample from.
 #' @importFrom dplyr mutate
-#' @importFrom dplyr arrange
 #' @importFrom dplyr group_by
 #' @importFrom dplyr slice
-#' @importFrom dplyr select
-#'
+#' @importFrom stringr str_sub
+#' @importFrom stats runif
+#' @importFrom magrittr "%>%"
+#' @importFrom rlang .data
 #' @export
 #' @examples
 #'
@@ -32,13 +33,14 @@ sing_alphabet <- function(wordbag){
     word = wordbag
   )
 
+  words_df_n <- nrow(words_df)
+
   selected_words_df <- words_df %>%
-    mutate(initial = toupper(str_sub(word, 1, 1))) %>%
-    mutate(rando = runif(n())) %>%
-    arrange(initial, rando) %>%
-    group_by(initial) %>%
-    slice(1) %>%
-    select(-rando)
+    dplyr::mutate(initial = stringr::str_sub(.data$word, 1, 1) %>% toupper()) %>%
+    dplyr::mutate(rando = stats::runif(words_df_n)) %>%
+    dplyr::arrange(.data$initial, .data$rando) %>%
+    dplyr::group_by(.data$initial) %>%
+    dplyr::slice(1)
 
   if(nrow(selected_words_df) < 26){
     warning("Your wordbag does not contain at least one word for each letter in the English alphabet, some letters will be skipped.")
