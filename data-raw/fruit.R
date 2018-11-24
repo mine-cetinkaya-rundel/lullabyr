@@ -10,5 +10,9 @@ fruits <- fruits_page %>%
   html_nodes(".column-width a") %>%
   html_text()
 
+# add fruits starting with V
+
+fruits <- c(fruits, "Vanilla Bean", "Victoria plum")
+
 # save data --------------------------------------------------------------------
 use_data(fruits)
